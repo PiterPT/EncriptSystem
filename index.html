@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Tool - Encriptar & Desencriptar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Konoha Criptografia</h2>
+
+    <div class="grid">
+        <div class="field-group">
+            <label>Texto Original / Entrada</label>
+            <textarea id="input" placeholder="Escreve algo aqui..."></textarea>
+        </div>
+
+        <div class="field-group">
+            <label>Resultado</label>
+            <textarea id="output" placeholder="O resultado aparecerá aqui..." readonly></textarea>
+            <button class="copy-btn" onclick="copyResult()">Copiar Resultado</button>
+        </div>
+        <div class="field-group">
+            <label>Chave</label>
+            <input id="chave" class="controls" type="number" value="3" min="1" max="25" placeholder="Chave de incriptação" >
+          
+        </div>
+    </div>
+
+    <div class="controls">
+        <select id="mode">
+            <option value="encrypt">Encriptar</option>
+            <option value="decrypt">Desencriptar</option>
+        </select>
+        <button onclick="processText()">Executar</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
